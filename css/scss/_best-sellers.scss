@@ -1,7 +1,9 @@
 .best-sellers {
     width: 831px;
     margin: auto;
-
+    .boton{
+        display: none;
+    }
     .titulo {
         font-family: "Lato";
         text-align: center;
