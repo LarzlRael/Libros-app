@@ -1,0 +1,54 @@
+@import "_variables";
+@import "header";
+@import "categoria";
+@import "_best-sellers";
+@import "_footer";
+@import "_slider";
+@import "_pagina";
+@import "_media";
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1000px;
+    margin: auto;
+    background: white;
+}
+
+.boton {
+    background: $primary;
+    width: 150px;
+    color: white;
+    padding: 10px 15px;
+    font-family: "Roboto";
+    font-size: 14px;
+    border: none;
+    border-radius: 23px;
+    margin: 5px;
+    &.primary {
+        background: $primary;
+    }
+    &.secondary {
+        background: $secondary;
+    }
+    &.yellow {
+        background: $yellow;
+    }
+    &.orange {
+        background: $orange;
+    }
+    &.ligth_green {
+        background: $ligth_green;
+    }
+    &.green {
+        background: $green;
+    }
+    &.gris {
+        background: #4c5a8b;
+    }
+}

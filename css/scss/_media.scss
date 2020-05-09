@@ -1,0 +1,55 @@
+@media screen and (max-width: 375px) {
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        background: $fondo_azul;
+        .logo {
+            font-family: "Roboto";
+            font-weight: bold;
+            color: #fff;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+        .busqueda {
+            .fas {
+                color: #4a77d1;
+            }
+            .buscar {
+                border: none;
+                border-bottom: 0.5px solid #7d7d7d;
+                color: #4a77d1;
+            }
+        }
+        .actions {
+            display: none;
+        }
+    }
+
+    //?Categorias
+
+    .categorias {
+        width: 375px;
+
+        margin: 0;
+        background: #ccc;
+        .grupo-botones {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 20px;
+            .boton {
+                margin: 13px 0;
+            }
+        }
+
+        .titulo {
+            font-family: "Lato";
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 80px;
+        }
+    }
+}

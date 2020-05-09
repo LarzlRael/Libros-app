@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: $fondo;
+    .logo {
+        font-family: "Roboto";
+        font-weight: bold;
+        color: #00204a;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    .busqueda {
+        .fas{
+            color:#4A77D1;
+            
+        }
+        .buscar {
+            width: 320px;
+            border: none;
+            padding: 6px;
+            background: $fondo;
+            border-bottom: 0.5px solid #7D7D7D;
+            color:#4A77D1
+        }
+    }
+    .actions {
+        .boton {
+            background: $primary;
+            color: white;
+            padding: 10px 15px;
+            font-family: "Roboto";
+            font-size: 14px;
+            border: none;
+            border-radius: 23px;
+            &.register {
+                background: $secondary;
+            }
+        }
+        
+    }
+}

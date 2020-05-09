@@ -1,0 +1,33 @@
+.footer {
+    margin-top: 40px;
+    padding: 25px;
+    background: #00204a;
+    display: flex;
+    justify-content: space-around;
+    .title {
+        margin-top: 60px;
+        margin-left: 100px;
+        color: white;
+        font-family: "Roboto";
+        font-weight: bold;
+        font-size: 30px;
+        justify-items: center;
+        
+    }
+    
+}
+
+p {
+    margin-top: 20px;
+    color: white;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 18px;
+}
+li {
+    list-style: none;
+    color: #3acace;
+    font-family: "Open Sans";
+    font-size: 14px;
+    line-height: 2;
+}
