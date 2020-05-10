@@ -139,7 +139,7 @@ if (!responsive()) {
         const div = document.createElement('div');
         div.classList.add('tarjeta');
         div.innerHTML = `
-                <img src=${cards[i].img} />  
+                <img src=${cards[i].img}  loading="lazy" />  
                 <p class="title">${cards[i].title}</p>
                 <p class="by">Por : ${cards[i].by}</p>
                 <div class="stars">
@@ -169,7 +169,7 @@ cards.forEach(slide => {
 
 
     div.innerHTML = `
-        <img src=${slide.img} alt="">
+        <img src=${slide.img} loading="lazy" alt="">
         <div class="info">
             <div class="title">
                 ${slide.title}

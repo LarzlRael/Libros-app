@@ -322,6 +322,9 @@ li {
     font-size: 20px;
     text-transform: uppercase;
   }
+  .header .busqueda {
+    display: none;
+  }
   .header .busqueda .fas {
     color: #4a77d1;
   }
@@ -398,6 +401,91 @@ li {
   }
   .footer.active {
     transform: translate(0%);
+  }
+
+  .libro {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 20px 0;
+    width: 568px;
+    background: none;
+  }
+  .libro img {
+    margin: auto;
+    width: 235px;
+    height: 360px;
+  }
+  .libro .info {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .libro .info .titulo {
+    text-align: center;
+    margin-top: 30px;
+    font-family: "Lato";
+    font-size: 30px;
+    color: #00204a;
+  }
+  .libro .info .desc {
+    font-family: "Open Sans";
+    font-size: 14px;
+    color: #0a0a07;
+    line-height: 2;
+    padding: 15px;
+  }
+  .libro .info .acciones {
+    display: flex;
+    flex-direction: column;
+    margin: auto 20px;
+  }
+  .libro .info .acciones .precio {
+    margin: auto;
+    color: #596988;
+    padding: 0 20px;
+  }
+  .libro .info .acciones .botones {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .boton {
+    background: #3586e6;
+    color: white;
+    padding: 10px 45px;
+    font-family: "Roboto";
+    font-size: 14px;
+    border: none;
+    border-radius: 23px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .categorias {
+    width: 360px;
+  }
+  .categorias .grupo-botones {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .best-sellers {
+    width: 370px;
+    margin: 0;
+    padding: 10px;
+  }
+  .best-sellers .boton {
+    margin: auto;
+    display: block;
+    text-align: center;
+  }
+  .best-sellers .titulo {
+    font-family: "Lato";
+    text-align: center;
+    font-size: 22px;
+    margin: 30px 0;
+  }
+  .best-sellers .tarjetas {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 * {
