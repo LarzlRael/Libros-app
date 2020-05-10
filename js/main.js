@@ -164,7 +164,14 @@ const between = (min, max) => {
 cards.forEach(slide => {
     const div = document.createElement('div');
     div.classList.add('tarjeta');
-    div.style.backgroundImage = `url('../img/${between(1, 24)}.jpg')`;
+
+    if (!responsive()) {
+
+        div.style.backgroundImage = `url('../img/${between(1, 24)}.jpg')`;
+    }
+
+
+
     div.style.backgroundPosition = 'center';
 
 
@@ -214,6 +221,16 @@ const grupo_botones = document.querySelector('grupo-botones');
 
 const bars = document.querySelector('#bars');
 bars.addEventListener('click', () => {
-    
+
     document.querySelector('.footer').classList.toggle('active');
-})
+});
+
+if (responsive()) {
+    const tarjetas = document.querySelectorAll('.tarjeta');
+    tarjetas.forEach(tarjeta => {
+        tarjeta.addEventListener('click', () => {
+            
+            window.location.href = 'http://localhost:5500/pagina.html'
+        })
+    })
+}
