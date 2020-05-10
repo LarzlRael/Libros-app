@@ -1,4 +1,4 @@
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 568px) {
     * {
         padding: 0;
         margin: 0;
@@ -35,12 +35,12 @@
     //?Categorias
 
     .categorias {
-        width: 375px;
+        width: 576px;
 
         margin: 0;
-        background: #ccc;
+        
         .grupo-botones {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             padding: 20px;
             .boton {
                 margin: 13px 0;
@@ -56,7 +56,7 @@
     }
 
     .best-sellers {
-        width: 375px;
+        width: 576px;
         margin: 0;
         padding: 10px;
 
@@ -74,7 +74,7 @@
         .tarjetas {
             display: grid;
             grid-gap: 20px;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 
