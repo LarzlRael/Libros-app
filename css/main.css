@@ -542,9 +542,11 @@ li {
     height: 400px;
   }
   .slider .tarjetas {
+    margin: 0 10px;
     scroll-behavior: smooth;
     overflow: auto;
     display: flex;
+    width: 340px;
   }
   .slider .tarjetas .tarjeta {
     flex: none;
