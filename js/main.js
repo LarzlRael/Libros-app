@@ -105,30 +105,55 @@ const botones = [
         nombre_boton: 'Suspenso'
     },
 ]
+
+const responsive = () => {
+    var w = window.innerWidth;
+    if (w <= 375) return true;
+}
+
 const tarjetas = document.getElementById('tarjetas'),
     slider = document.getElementById('slider');
 
 console.log(slider)
 
-cards.forEach(tarjeta => {
-    const div = document.createElement('div');
-    div.classList.add('tarjeta');
-    div.innerHTML = `
-            <img src=${tarjeta.img} />  
+if (!responsive()) {
+    cards.forEach(tarjeta => {
+        const div = document.createElement('div');
+        div.classList.add('tarjeta');
+        div.innerHTML = `
+                <img src=${tarjeta.img} />  
+                <p class="title">${tarjeta.title}</p>
+                <p class="by">Por : ${tarjeta.by}</p>
+                <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+        `;
+        tarjetas.appendChild(div);
+    });
+} else {
+    for (let i = 0; i < cards.length / 2; i++) {
+        const div = document.createElement('div');
+        div.classList.add('tarjeta');
+        div.innerHTML = `
+                <img src=${cards[i].img} />  
+                <p class="title">${cards[i].title}</p>
+                <p class="by">Por : ${cards[i].by}</p>
+                <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+        `;
+        tarjetas.appendChild(div);
 
-            <p class="title">${tarjeta.title}</p>
-            
-            <p class="by">Por : ${tarjeta.by}</p>
-            <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-        </div>
-    `;
-    tarjetas.appendChild(div);
-});
+    }
+}
 
 const between = (min, max) => {
     return Math.floor(
@@ -186,3 +211,9 @@ botones_slide.forEach(boton => {
 
 const grupo_botones = document.querySelector('grupo-botones');
 
+
+const bars = document.querySelector('#bars');
+bars.addEventListener('click', () => {
+    
+    document.querySelector('.footer').classList.toggle('active');
+})
