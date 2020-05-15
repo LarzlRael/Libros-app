@@ -212,7 +212,7 @@ console.log(botones_slide)
 
 botones_slide.forEach(boton => {
     boton.addEventListener('click', () => {
-        window.location.href = 'http://localhost:5500/pagina.html';
+        window.location.href = '/pagina.html';
     })
 })
 
@@ -230,7 +230,7 @@ if (responsive()) {
     tarjetas.forEach(tarjeta => {
         tarjeta.addEventListener('click', () => {
             
-            window.location.href = 'http://localhost:5500/pagina.html'
+            window.location.href = '/pagina.html'
         })
     })
 }

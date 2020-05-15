@@ -219,9 +219,6 @@ li {
   height: 350px;
   padding: 35px 15px;
 }
-.slider .tarjetas .tarjeta:hover {
-  cursor: pointer;
-}
 .slider .tarjetas .tarjeta img {
   width: 215px;
   height: 226px;
@@ -629,4 +626,4 @@ li {
   background: #4c5a8b;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=estilos.css.map */
