@@ -67,6 +67,9 @@
             margin: auto;
             display: block;
             text-align: center;
+            &:hover{
+                cursor: pointer;
+            }
         }
         .titulo {
             font-family: "Lato";
@@ -165,6 +168,9 @@
         font-size: 14px;
         border: none;
         border-radius: 23px;
+        &:hover{
+            cursor: pointer;
+        }
     }
 }
 
@@ -191,6 +197,9 @@
             margin: auto;
             display: block;
             text-align: center;
+            &:hover{
+                cursor: pointer;
+            }
         }
         .titulo {
             font-family: "Lato";
