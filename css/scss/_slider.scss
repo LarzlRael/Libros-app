@@ -43,6 +43,9 @@
         scroll-behavior: smooth;
         overflow: hidden;
         .tarjeta {
+            &:hover {
+                cursor: pointer;
+            }
             margin: 0 2px;
             flex: 0 0 25em;
             flex-grow: 1;
