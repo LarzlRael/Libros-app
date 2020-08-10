@@ -24,8 +24,15 @@ if (window.location.href.includes('/pagina.html')) {
     page_img.src = img;
     page_title.textContent = title;
     page_by.textContent = `Escrito por ${by}`;
-    libro.style.backgroundImage = `url(${background_image})`;
 
+    if (responsive()) {
+        libro.style.backgroundImage = 'none';
+    } else {
+
+        libro.style.cssText = `
+        background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url(${background_image});
+        `;
+    }
 }
 
 
@@ -147,7 +154,7 @@ const botones = [
     },
 ]
 
-const responsive = () => {
+function responsive() {
 
     var w = window.innerWidth;
     console.log(w)
@@ -208,6 +215,10 @@ if (!window.location.href.includes('/pagina.html')) {
         div.classList.add('tarjeta');
         if (!responsive()) {
             div.style.backgroundImage = `url('${slide.background_image}')`;
+            const opacity = 0.3;
+            div.style.cssText = `
+        background-image: linear-gradient(rgba(255,255,255,${opacity}), rgba(255,255,255,${opacity})), url(${slide.background_image});
+        `;
         }
         div.style.backgroundPosition = 'center';
 
@@ -248,7 +259,7 @@ if (!window.location.href.includes('/pagina.html')) {
             window.location.href = '/pagina.html';
         })
     })
-    
+
 } else {
     console.log('hubo un error en la ejecucion');
     console.log(window.location.href)
@@ -271,8 +282,27 @@ if (responsive()) {
 
 const navigation_drawer = document.querySelector('#navigation-drawer');
 console.log(navigation_drawer);
-navigation_drawer.addEventListener('click', e => {
-    document.querySelector('.footer').classList.toggle('drawer-navigation-active')
+
+let navigation_drawer_open = false;
+
+navigation_drawer.addEventListener('click', () => {
+
+    if (navigation_drawer_open) {
+
+        document.querySelector('.footer').classList.toggle('drawer-navigation-active')
+
+        navigation_drawer.classList.add('fas', 'fa-bars');
+        navigation_drawer.classList.remove('fa', 'fa-times');
+        navigation_drawer_open = false;
+
+    } else {
+        document.querySelector('.footer').classList.toggle('drawer-navigation-active');
+
+        navigation_drawer.classList.remove('fas', 'fa-bars');
+        navigation_drawer.classList.add('fa', 'fa-times');
+
+        navigation_drawer_open = true;
+    }
 })
 
 

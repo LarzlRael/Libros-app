@@ -1,23 +1,33 @@
+.algo {
+  opacity: 0.2;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   padding: 20px;
   align-content: center;
+  align-items: center;
   width: 100%;
   background: #e1e2e4;
 }
 @media (min-width: 320px) and (max-width: 768px) {
   .header {
-    background: #00204A;
+    background: #00204a;
     width: 100%;
   }
 }
-.header .logo {
+.header .logo a {
   font-family: "Roboto";
   font-weight: bold;
   color: #00204a;
   font-size: 20px;
   text-transform: uppercase;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .header .logo a {
+    color: #fff;
+  }
 }
 @media (min-width: 320px) and (max-width: 768px) {
   .header .logo {
@@ -85,6 +95,7 @@
 .categorias .grupo-botones {
   width: 100%;
   display: grid;
+  justify-items: center;
   grid-template-columns: repeat(5, 1fr);
 }
 @media (min-width: 320px) and (max-width: 768px) {
@@ -120,7 +131,7 @@
   background: #3dd196;
 }
 .categorias .grupo-botones .boton.green {
-  background: #78A125;
+  background: #78a125;
 }
 .categorias .grupo-botones .boton.gris {
   background: #4c5a8b;
@@ -199,6 +210,7 @@
     transition: 0.3s ease all;
     /* para sacarlo completaente de pantalla */
     transform: translate(-100%);
+    justify-content: flex-start;
   }
 }
 .footer .title {
@@ -220,6 +232,7 @@
 }
 @media (min-width: 320px) and (max-width: 768px) {
   .footer .actions {
+    margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
   }
@@ -382,40 +395,80 @@ li a {
 .libro {
   display: flex;
   padding: 30px;
-  background: #ccc;
   margin: 20px 0;
   background-position: center;
   /* Center the image */
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .libro {
+    flex-direction: column;
+    padding: 0;
+  }
 }
 .libro img {
   width: 235px;
   height: 360px;
 }
-.libro .info {
-  margin-left: 20px;
+@media (min-width: 320px) and (max-width: 768px) {
+  .libro img {
+    margin: auto;
+  }
 }
-.libro .info .by {
-  margin-left: 20px;
+.libro .info {
+  padding: 20px;
 }
 .libro .info .titulo {
   font-family: "Lato";
   font-size: 42px;
-  color: white;
+  color: #00204a;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .libro .info .titulo {
+    font-size: 32px;
+  }
 }
 .libro .info .desc {
   font-family: "Open Sans";
   font-size: 14px;
   color: white;
   line-height: 2;
-  padding: 15px;
+  color: #0a0a07;
+}
+.libro .info .by {
+  color: #000;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .libro .info .by {
+    margin-bottom: 16px;
+  }
 }
 .libro .info .acciones {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .libro .info .acciones {
+    flex-direction: column;
+  }
 }
 .libro .info .acciones .precio {
   color: #596988;
-  padding: 0 20px;
+  margin: 0;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .libro .info .acciones .precio {
+    text-align: center;
+    margin: 1rem 0;
+  }
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .libro .info .acciones .botones {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .boton {
@@ -442,6 +495,7 @@ li a {
 }
 
 .container {
+  max-width: 1200px;
   width: 80%;
   margin: auto;
   background: white;
@@ -482,7 +536,7 @@ li a {
   background: #3dd196;
 }
 .boton.green {
-  background: #78A125;
+  background: #78a125;
 }
 .boton.gris {
   background: #4c5a8b;

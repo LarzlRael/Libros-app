@@ -11,6 +11,7 @@
     .grupo-botones {
         width: 100%;
         display: grid;
+        justify-items: center;
         grid-template-columns: repeat(5, 1fr);
         @include media(sm) {
             padding: 20px;

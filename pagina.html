@@ -20,9 +20,13 @@
 <body>
     <div class="container">
         <header class="header">
-            <a href="/" class="logo">
-                Logotipo
-            </a>
+            <div class="logo">
+                <a href="#">Logotipo</a>
+                <div class="iconos">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-bars" id="navigation-drawer"></i>
+                </div>
+            </div>
             <div class="busqueda">
                 <input type="text" class="buscar" placeholder="Buscar Libro">
                 <i class="fas fa-search"></i>
@@ -36,12 +40,13 @@
                     Registrarse
                 </button>
             </div>
+
         </header>
         <!-- Contenido -->
         <div class="libro" id="book">
             <img src="" alt="" id="page-img">
             <div class="info">
-                <div class="titulo" id="page-title">Title</div>
+                <div class="titulo" id="page-title">Book's Title</div>
                 <p class="by" id="by">Por: </p>
                 <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, obcaecati inventore
                     ullam temporibus maxime praesentium voluptate dolore voluptatem distinctio cum. Nobis quas
@@ -71,7 +76,7 @@
             </div>
         </div>
 
-        <footer class="footer">
+        <footer class="footer" id="footer">
             <div class="title">
                 Logotipo
             </div>
@@ -95,6 +100,17 @@
                     <li><a href="#">numquam hic, cumque nemo</a></li>
                 </ul>
             </div>
+
+            <div class="actions">
+                <button class="boton-footer login">
+                    Iniciar Sesion
+                </button>
+                <button class="boton-footer register">
+                    Registrarse
+                </button>
+            </div>
+
+
         </footer>
     </div>
     <script src="js/main.js"></script>

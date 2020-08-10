@@ -21,6 +21,7 @@
         transition: 0.3s ease all;
         /* para sacarlo completaente de pantalla */
         transform: translate(-100%);
+        justify-content: flex-start;
     }
 
     .title {
@@ -38,6 +39,7 @@
     .actions {
         display: none;
         @include media(sm) {
+            margin-top: 1.5rem;
             display: flex;
             flex-direction: column;
         }
@@ -74,3 +76,6 @@ li {
         line-height: 2;
     }
 }
+
+// informacion
+// contacto

@@ -5,19 +5,25 @@
     justify-content: space-between;
     padding: 20px;
     align-content: center;
+    align-items: center;
     width: 100%;
-
     background: $fondo;
     @include media(sm) {
         background: $fondo_azul;
         width: 100%;
     }
     .logo {
-        font-family: "Roboto";
-        font-weight: bold;
-        color: #00204a;
-        font-size: 20px;
-        text-transform: uppercase;
+        a {
+            font-family: "Roboto";
+            font-weight: bold;
+            color: #00204a;
+            font-size: 20px;
+            text-transform: uppercase;
+            @include media(sm) {
+                
+                color: $text-color-white;
+            }
+        }
 
         @include media(sm) {
             width: 100%;
