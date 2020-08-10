@@ -148,8 +148,10 @@ const botones = [
 ]
 
 const responsive = () => {
+
     var w = window.innerWidth;
-    if (w <= 375) return true;
+    console.log(w)
+    if (w >= 320 && w <= 768) return true;
 }
 
 const tarjetas = document.getElementById('tarjetas');
@@ -246,10 +248,7 @@ if (!window.location.href.includes('/pagina.html')) {
             window.location.href = '/pagina.html';
         })
     })
-    const bars = document.querySelector('#bars');
-    bars.addEventListener('click', () => {
-        document.querySelector('.footer').classList.toggle('active');
-    });
+    
 } else {
     console.log('hubo un error en la ejecucion');
     console.log(window.location.href)
@@ -269,5 +268,11 @@ if (responsive()) {
     })
 }
 
+
+const navigation_drawer = document.querySelector('#navigation-drawer');
+console.log(navigation_drawer);
+navigation_drawer.addEventListener('click', e => {
+    document.querySelector('.footer').classList.toggle('drawer-navigation-active')
+})
 
 

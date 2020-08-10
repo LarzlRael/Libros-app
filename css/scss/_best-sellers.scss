@@ -1,7 +1,6 @@
 .best-sellers {
-    width: 831px;
-    margin: auto;
-    .boton{
+    width: 100%;
+    .boton {
         display: none;
     }
     .titulo {
@@ -14,15 +13,20 @@
         display: grid;
         grid-gap: 20px;
         grid-template-columns: repeat(5, 1fr);
+
+        @include media(sm) {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 20px;
+        }
+
         .tarjeta {
             .title {
                 text-align: center;
                 font-family: "Roboto";
                 font-size: 14px;
                 padding: 7px;
-                color:#000;
+                color: #000;
                 text-transform: uppercase;
-                
             }
             .by {
                 font-family: "Lato";
@@ -39,7 +43,7 @@
             .stars {
                 margin: 20px;
                 text-align: center;
-                color: #FFDD00;
+                color: #ffdd00;
             }
         }
     }

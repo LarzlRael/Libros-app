@@ -1,5 +1,5 @@
 .categorias {
-    width: 831px;
+    width: 100%;
     margin: auto;
 
     .titulo {
@@ -9,8 +9,13 @@
         margin-bottom: 80px;
     }
     .grupo-botones {
+        width: 100%;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
+        @include media(sm) {
+            padding: 20px;
+            grid-template-columns: repeat(2, 1fr);
+        }
         .boton {
             background: $primary;
             width: 150px;

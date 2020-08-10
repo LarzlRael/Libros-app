@@ -1,10 +1,32 @@
 .footer {
+    width: 100%;
     margin-top: 40px;
     padding: 25px;
     background: #00204a;
     display: flex;
     justify-content: space-around;
+
+    &.drawer-navigation-active {
+        transform: translate(-0%);
+    }
+    @include media(sm) {
+        position: absolute;
+        width: 75%;
+        height: 100vh;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        opacity: 0.85;
+        z-index: 600;
+        transition: 0.3s ease all;
+        /* para sacarlo completaente de pantalla */
+        transform: translate(-100%);
+    }
+
     .title {
+        @include media(sm) {
+            display: none;
+        }
         margin-top: 60px;
         margin-left: 100px;
         color: white;
@@ -15,6 +37,24 @@
     }
     .actions {
         display: none;
+        @include media(sm) {
+            display: flex;
+            flex-direction: column;
+        }
+        .boton-footer {
+            background: $primary;
+            color: white;
+            padding: 10px 15px;
+            font-family: "Roboto";
+            font-size: 14px;
+            border: none;
+            border-radius: 23px;
+            width: 100%;
+            margin-bottom: 16px;
+            &.register {
+                background: $secondary;
+            }
+        }
     }
 }
 p {
